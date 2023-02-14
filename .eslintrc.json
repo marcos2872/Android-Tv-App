@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "react-native/react-native": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard-with-typescript"
+    ],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
+            "rules": {
+              "no-undef": "off"
+            }
+          }
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "extraFileExtensions": [".tsx"]
+    },
+    "plugins": [
+        "react", 
+        "react-native" 
+    ],
+    "rules": {
+    }
+}
