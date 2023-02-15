@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "android-tv-app",
-    "slug": "android-tv-app",
+    "name": "test",
+    "slug": "test",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

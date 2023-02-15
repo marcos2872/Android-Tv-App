@@ -1,8 +1,15 @@
 import React from 'react'
+// import { Text } from 'react-native'
+import { ThemeProvider } from 'styled-components/native'
 import Routes from './routes'
+import theme from './theme'
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
   return (
-    <Routes />
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
   )
 }
+
+export default App

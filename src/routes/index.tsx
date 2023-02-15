@@ -9,10 +9,12 @@ const Stack = createNativeStackNavigator()
 
 const Routes: React.FC = () => {
   return (
-    <NavigationContainer>
-      <Stack.Screen name='login' component={Login} />
-      <Stack.Screen name='register' component={Register} />
-      <Stack.Screen name='home' component={Home} />
+    <NavigationContainer >
+      <Stack.Navigator initialRouteName="home">
+        <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
+        <Stack.Screen name='home' component={Home} options={{ headerShown: false }} />
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }

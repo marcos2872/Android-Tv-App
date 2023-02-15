@@ -9,16 +9,9 @@
         "standard-with-typescript"
     ],
     "overrides": [
-        {
-            "files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
-            "rules": {
-              "no-undef": "off"
-            }
-          }
     ],
     "parserOptions": {
-        "project": "./tsconfig.json",
-        "extraFileExtensions": [".tsx"]
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "react", 
