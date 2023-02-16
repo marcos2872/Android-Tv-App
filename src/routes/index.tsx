@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator()
 const Routes: React.FC = () => {
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName="home">
+      <Stack.Navigator initialRouteName="login">
         <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
         <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
         <Stack.Screen name='home' component={Home} options={{ headerShown: false }} />
