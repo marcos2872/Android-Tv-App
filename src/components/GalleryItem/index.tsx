@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react'
-import { Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
+import { View } from 'react-native'
+import { Main, Image, Description } from './styled'
 
 const GalleryItem: React.FC<{ title: string, image: string, hasTVPreferredFocus: boolean }> = ({ title, image, hasTVPreferredFocus }) => {
   const [focus, setFocus] = useState(false)
@@ -14,50 +15,23 @@ const GalleryItem: React.FC<{ title: string, image: string, hasTVPreferredFocus:
   }, [title])
 
   return (
-    <TouchableHighlight
+    <Main
       onFocus={onFocus}
       onBlur={onBlur}
-
-      style={[styles.wrapper, focus ? styles.wrapperFocused : null]}
+      hasTVPreferredFocus={hasTVPreferredFocus}
     >
       <View>
         <Image
-          style={styles.image}
           source={{ uri: image }}
         />
-        {focus && (
-          <Text>
+        {/* {focus && ( */}
+          <Description>
             {title}
-          </Text>
-        )}
+          </Description>
+        {/* )} */}
       </View>
-    </TouchableHighlight>
+    </Main>
   )
 }
-
-const styles = StyleSheet.create({
-  wrapper: {
-    borderColor: 'transparent',
-    borderWidth: 5,
-    borderRadius: 15,
-    marginHorizontal: 10
-  },
-  wrapperFocused: {
-    borderColor: 'rgb(232, 65, 175)'
-  },
-  image: {
-    width: 250,
-    height: 150,
-    borderRadius: 10
-  },
-  text: {
-    position: 'absolute',
-    bottom: 10,
-    left: 10,
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold'
-  }
-})
 
 export default GalleryItem
